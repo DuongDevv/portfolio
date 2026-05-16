@@ -9,22 +9,49 @@
     "hireMe": "Thuê mình"
   },
   "hero": {
-    "badge": "Đang tìm Fresher / Intern · TP.HCM",
+    "badge": "Sẵn sàng thực tập (Intern / Fresher) · TP. Hồ Chí Minh",
     "role": "Frontend Developer",
-    "bio": "Một lập trình viên cần cù bù siêng năng — có làm thì mới có ăn. Đang theo học chuyên ngành Web tại Trường CĐ Kỹ thuật Cao Thắng, chuyên sâu về Frontend với hệ sinh thái Next.js · React · TypeScript.",
-    "viewProjects": "Xem Projects",
-    "contactMe": "Liên hệ mình"
+    "bio": "Một lập trình viên thực chiến với tư duy 'học qua làm'. Hiện là sinh viên CNTT tại Cao đẳng Kỹ thuật Cao Thắng, tập trung chuyên sâu vào hệ sinh thái Next.js — React, TypeScript, Tailwind CSS và có nền tảng tư duy xử lý dữ liệu vững chắc từ C#/SQL Server.",
+    "viewProjects": "Xem dự án",
+    "contactMe": "Liên hệ với mình"
   },
   "about": {
-    "title": "Giới thiệu",
-    "subtitle": "Developer, người học hỏi không ngừng nghỉ",
-    "bio1": "Xin chào! Mình là Nguyễn Quốc Đương, một Frontend Developer đang chuyên sâu về hệ sinh thái Next.js — React, Node.js, TypeScript.",
-    "bio2": "Đam mê xây dựng các ứng dụng web tối ưu hiệu suất và giải quyết các bài toán hệ thống phức tạp.",
-    "bio3": "Ngoài giờ code, mình dành thời gian nghiên cứu thêm nhiều kỹ năng mới để không ngừng phát triển bản thân.",
-    "education": "CĐ Kỹ thuật Cao Thắng · Chuyên ngành Web · TP.HCM",
+    "title": "Về mình",
+    "subtitle": "Developer lập trình bằng tư duy, không ngừng học hỏi",
+    "bio1": "Xin chào! Mình là Nguyễn Quốc Đương, một Frontend Developer với định hướng xây dựng các sản phẩm web chất lượng cao, tối ưu hiệu năng và trải nghiệm người dùng.",
+    "bio2": "Thay vì học vẹt công nghệ, mình luôn đào sâu bản chất cốt lõi của JavaScript/React và rèn luyện tư duy tổ chức mã nguồn sạch sẽ (Clean Code).",
+    "bio3": "Ngoài thời gian code, mình thích nghiên cứu về UI/UX, tối ưu hóa hệ thống và tham gia các hoạt động công nghệ để nâng cao kỹ năng teamwork.",
+    "education": "Cao đẳng Kỹ thuật Cao Thắng · Công nghệ Thông tin",
     "contactTitle": "Liên hệ",
     "locationTitle": "Vị trí",
     "locationValue": "TP. Hồ Chí Minh, Việt Nam"
+  },
+  "experience": {
+    "pageTitle": "Kinh nghiệm & Hoạt động",
+    "pageSubtitle": "Hành trình tích lũy kiến thức, rèn luyện tư duy thực chiến qua các đồ án và cuộc thi",
+    "list": [
+      {
+        "id": "academic-projects",
+        "role": "Lập trình viên Đồ án (Academic Developer)",
+        "company": "Cao đẳng Kỹ thuật Cao Thắng",
+        "duration": "2024 - Hiện tại",
+        "details": [
+          "Xây dựng và hoàn thiện Hệ thống Quản lý Cửa hàng Quần áo bằng C# WinForms kết nối SQL Server; thiết kế cấu trúc database, viết Stored Procedures tối ưu truy vấn.",
+          "Nghiên cứu sâu hệ sinh thái Next.js/React, triển khai kỹ thuật quản lý mã nguồn sạch sẽ (Clean Code), tổ chức thư mục bài bản và tối ưu UI/UX mượt mà.",
+          "Thực hành quy trình làm việc nhóm, quản lý source code và phân chia nhánh tính năng thông qua Git/GitHub chuẩn thực tế."
+        ]
+      },
+      {
+        "id": "olympic-competition",
+        "role": "Thành viên Đội tuyển Ôn luyện",
+        "company": "Olympic Tin học Cao Thắng 2026",
+        "duration": "Tháng 04/2026",
+        "details": [
+          "Tham gia giải quyết các bài toán thuật toán nâng cao, tối ưu cấu trúc dữ liệu và giải thuật bằng ngôn ngữ C++.",
+          "Rèn luyện tư duy logic, kỹ năng phân tích và giải quyết vấn đề áp lực cao, củng cố kiến thức nền tảng vững chắc về hệ thống mạng và cơ sở dữ liệu SQL."
+        ]
+      }
+    ]
   },
   "projects": {
     "pageTitle": "Dự án cá nhân & Học tập",

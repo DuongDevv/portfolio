@@ -9,22 +9,49 @@
     "hireMe": "Hire Me"
   },
   "hero": {
-    "badge": "Open to Fresher / Intern · Ho Chi Minh City",
+    "badge": "Open to Intern / Fresher Frontend Roles · Ho Chi Minh City",
     "role": "Frontend Developer",
-    "bio": "A hardworking developer who believes in learning by doing. Currently studying Information Technology at Cao Thang Technical College, specializing in the Next.js ecosystem — React, TypeScript, Node.js.",
+    "bio": "A practical developer who believes in learning by doing. Currently an IT student at Cao Thang Technical College, specializing in the Next.js ecosystem — React, TypeScript, Tailwind CSS, backed by a strong data-processing foundation from C# and SQL Server.",
     "viewProjects": "View Projects",
     "contactMe": "Contact Me"
   },
   "about": {
     "title": "About Me",
-    "subtitle": "Developer, endless learner",
-    "bio1": "Hello! I'm Nguyen Quoc Duong, a Frontend Developer specializing in the Next.js ecosystem — React, Node.js, TypeScript.",
-    "bio2": "Passionate about building high-performance web applications and solving complex system problems.",
-    "bio3": "Outside of coding, I spend time researching new skills to continuously grow and develop myself.",
-    "education": "Cao Thang Technical College · Information Technology · HCMC",
+    "subtitle": "Logic-driven developer, continuous learner",
+    "bio1": "Hello! I'm Nguyen Quoc Duong, a Frontend Developer dedicated to building high-performance web applications with seamless user experiences.",
+    "bio2": "Instead of just learning frameworks superficially, I always dive deep into the core mechanics of JavaScript/React and practice writing Clean Code.",
+    "bio3": "Outside of coding, I focus on UI/UX principles, system optimization, and engaging in tech activities to sharpen my teamwork skills.",
+    "education": "Cao Thang Technical College · Information Technology",
     "contactTitle": "Contact",
     "locationTitle": "Location",
     "locationValue": "Ho Chi Minh City, Vietnam"
+  },
+  "experience": {
+    "pageTitle": "Experience & Activities",
+    "pageSubtitle": "My journey of sharpening practical programming skills through projects and competitions",
+    "list": [
+      {
+        "id": "academic-projects",
+        "role": "Academic Project Developer",
+        "company": "Cao Thang Technical College",
+        "duration": "2024 - Present",
+        "details": [
+          "Developed and deployed a Clothing Store Management System using C# WinForms and SQL Server, optimizing database structures and Stored Procedures.",
+          "Dived deep into the Next.js/React ecosystem, applying Clean Code principles, robust folder structures, and polished UI/UX designs.",
+          "Practiced industry-standard teamwork workflows, version control, and feature-branching strategies using Git and GitHub."
+        ]
+      },
+      {
+        "id": "olympic-competition",
+        "role": "Training Team Member",
+        "company": "Cao Thang Informatics Olympic 2026",
+        "duration": "Apr 2026",
+        "details": [
+          "Solved advanced algorithmic problems and optimized data structures using C++.",
+          "Sharpened logical thinking and high-pressure problem-solving skills while reinforcing core computer science fundamentals in networking and SQL databases."
+        ]
+      }
+    ]
   },
   "projects": {
     "pageTitle": "Personal & Academic Projects",
