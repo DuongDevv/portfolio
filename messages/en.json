@@ -18,7 +18,11 @@
     "contactMe": "Contact Me",
     "statSkills": "SKILLS & TECH",
     "statLearning": "SELF-LEARNING SPIRIT",
-    "statCoding": "RESEARCH & CODING"
+    "statCoding": "RESEARCH & CODING",
+    "cardProjectsTitle": "Explore Practical Projects",
+    "cardProjectsDesc": "View my C# and React applications",
+    "cardSkillsTitle": "View Tech Stack & Skills",
+    "cardSkillsDesc": "Detailed list of tools I master"
   },
 
   "about": {
@@ -86,12 +90,21 @@
   },
 
   "skills": {
-    "pageTitle": "Tech Stack & Skills",
-    "pageSubtitle": "The tools and technologies I use to bring ideas to life",
+    "pageTitle": "Professional Skills",
+    "pageSubtitle": "Overview of tools, languages, and technical stack I use to build applications.",
     "categories": {
-      "frontend": "FrontEnd Development",
-      "logicDb": "Logic & Databases",
-      "tools": "Tools & Ecosystem"
+      "languages": "Programming Languages",
+      "frontend": "Front-End Development",
+      "backend": "Back-End Development",
+      "database": "Database & Cloud",
+      "tools": "Tools & DevOps",
+      "os": "Operating Systems",
+      "softskills": "Soft Skills"
+    },
+    "skillsList": {
+      "adaptability": "Quick Adaptability",
+      "hardworking": "Hard-working / Diligent",
+      "openminded": "Open-minded Thinking"
     }
   },
 

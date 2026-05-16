@@ -18,7 +18,11 @@
     "contactMe": "Liên hệ với mình",
     "statSkills": "KỸ NĂNG & CÔNG NGHỆ",
     "statLearning": "TINH THẦN TỰ HỌC",
-    "statCoding": "NGHIÊN CỨU & CODE"
+    "statCoding": "NGHIÊN CỨU & CODE",
+    "cardProjectsTitle": "Khám phá Dự án thực chiến",
+    "cardProjectsDesc": "Xem các sản phẩm C# và React mình đã build",
+    "cardSkillsTitle": "Xem kho Kỹ năng & Công nghệ",
+    "cardSkillsDesc": "Chi tiết các công cụ mình làm chủ"
   },
 
   "about": {
@@ -86,12 +90,21 @@
   },
 
   "skills": {
-    "pageTitle": "Công nghệ & Kỹ năng",
-    "pageSubtitle": "Những công cụ và công nghệ mình sử dụng để hiện thực hóa các ý tưởng",
+    "pageTitle": "Kỹ năng chuyên môn",
+    "pageSubtitle": "Tổng quan về các công cụ, ngôn ngữ và kỹ thuật mà mình sử dụng để xây dựng sản phẩm.",
     "categories": {
-      "frontend": "Phát triển FrontEnd",
-      "logicDb": "Tư duy Logic & Cơ sở dữ liệu",
-      "tools": "Công cụ & Hệ sinh thái"
+      "languages": "Ngôn ngữ lập trình",
+      "frontend": "Front-End Development",
+      "backend": "Back-End Development",
+      "database": "Cơ sở dữ liệu & Cloud",
+      "tools": "Công cụ & DevOps",
+      "os": "Hệ điều hành",
+      "softskills": "Kỹ năng mềm"
+    },
+    "skillsList": {
+      "adaptability": "Thích nghi nhanh",
+      "hardworking": "Chăm chỉ / Cần cù",
+      "openminded": "Tư duy cởi mở"
     }
   },
 
