@@ -27,18 +27,30 @@
     "locationValue": "TP. Hồ Chí Minh, Việt Nam"
   },
   "projects": {
-    "pageTitle": "Dự án cá nhân",
-    "pageSubtitle": "Những sản phẩm mình đã xây dựng với tất cả đam mê",
+    "pageTitle": "Dự án cá nhân & Học tập",
+    "pageSubtitle": "Những sản phẩm mình đã xây dựng với tất cả đam mê và tư duy logic",
     "viewAll": "Xem tất cả trên GitHub",
-    "statusLive": "Live",
-    "statusWip": "Đang làm",
-    "proj1_title": "Personal Portfolio",
-    "proj1_desc": "Trang portfolio cá nhân responsive, tối ưu SEO với hiệu ứng mượt mà. Hỗ trợ đa ngôn ngữ VI/EN.",
-    "proj2_title": "Web App Quản Lý",
-    "proj2_desc": "Ứng dụng web full-stack với giao diện hiện đại, quản lý state hiệu quả và tích hợp backend Node.js + MySQL.",
-    "proj3_title": "UI Component Library",
-    "proj3_desc": "Bộ thư viện UI components tái sử dụng xây dựng với Tailwind CSS, hỗ trợ dark mode và responsive.",
-    "proj4_title": "C# Desktop App",
-    "proj4_desc": "Ứng dụng desktop quản lý dữ liệu quần áo bằng C# và Visual Studio 2022, kết nối cơ sở dữ liệu SQL Server."
+    "statusLive": "Trực tuyến",
+    "statusWip": "Đang phát triển",
+    "list": [
+      {
+        "id": "clothing-store",
+        "emoji": "🖥️",
+        "title": "Hệ thống Quản lý Cửa hàng Quần áo",
+        "desc": "Ứng dụng Desktop quản lý kho, doanh thu và nhân viên cho cửa hàng thời trang. Xử lý tối ưu câu lệnh truy vấn dữ liệu lớn, phân quyền tài khoản và thiết kế giao diện WinForms trực quan.",
+        "tags": ["C#", "WinForms", "SQL Server", "Stored Procedure"],
+        "status": "wip",
+        "github": "https://github.com/DuongDevv"
+      },
+      {
+        "id": "portfolio",
+        "emoji": "🌐",
+        "title": "Personal Portfolio Website",
+        "desc": "Trang web giới thiệu bản thân và sản phẩm cá nhân. Tối ưu SEO, hỗ trợ giao diện Dark/Light Mode và tích hợp hệ thống đa ngôn ngữ (Next-intl) mượt mà.",
+        "tags": ["Next.js 15", "React", "Tailwind CSS", "TypeScript"],
+        "status": "live",
+        "github": "https://github.com/DuongDevv"
+      }
+    ]
   }
 }

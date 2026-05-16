@@ -11,7 +11,7 @@
   "hero": {
     "badge": "Open to Fresher / Intern · Ho Chi Minh City",
     "role": "Frontend Developer",
-    "bio": "A hardworking developer who believes in learning by doing. Currently studying Web Development at Cao Thang Technical College, specializing in the Next.js ecosystem — React, TypeScript, Node.js.",
+    "bio": "A hardworking developer who believes in learning by doing. Currently studying Information Technology at Cao Thang Technical College, specializing in the Next.js ecosystem — React, TypeScript, Node.js.",
     "viewProjects": "View Projects",
     "contactMe": "Contact Me"
   },
@@ -21,24 +21,36 @@
     "bio1": "Hello! I'm Nguyen Quoc Duong, a Frontend Developer specializing in the Next.js ecosystem — React, Node.js, TypeScript.",
     "bio2": "Passionate about building high-performance web applications and solving complex system problems.",
     "bio3": "Outside of coding, I spend time researching new skills to continuously grow and develop myself.",
-    "education": "Cao Thang Technical College · Web Dev · HCMC",
+    "education": "Cao Thang Technical College · Information Technology · HCMC",
     "contactTitle": "Contact",
     "locationTitle": "Location",
     "locationValue": "Ho Chi Minh City, Vietnam"
   },
   "projects": {
-    "pageTitle": "Personal Projects",
-    "pageSubtitle": "Things I've built with passion and dedication",
+    "pageTitle": "Personal & Academic Projects",
+    "pageSubtitle": "Things I've built with passion, dedication, and logical thinking",
     "viewAll": "View all on GitHub",
     "statusLive": "Live",
     "statusWip": "In Progress",
-    "proj1_title": "Personal Portfolio",
-    "proj1_desc": "Responsive, SEO-friendly personal portfolio with smooth design and VI/EN i18n support.",
-    "proj2_title": "Management Web App",
-    "proj2_desc": "Full-stack web application with modern UI, efficient state management, and Node.js + MySQL backend.",
-    "proj3_title": "UI Component Library",
-    "proj3_desc": "Reusable UI component library built with Tailwind CSS, supporting dark mode and responsive layouts.",
-    "proj4_title": "C# Desktop App",
-    "proj4_desc": "Data management desktop application built with C# and Visual Studio 2022, connected to SQL Server."
+    "list": [
+      {
+        "id": "clothing-store",
+        "emoji": "🖥️",
+        "title": "Clothing Store Management System",
+        "desc": "A desktop application designed to manage inventory, sales revenue, and employee data for a fashion store. Optimized heavy database queries, implemented role-based user authentication, and designed an intuitive WinForms UI.",
+        "tech": ["C#", "WinForms", "SQL Server", "Stored Procedure"],
+        "status": "wip",
+        "github": "https://github.com/DuongDevv"
+      },
+      {
+        "id": "portfolio",
+        "emoji": "🌐",
+        "title": "Personal Portfolio Website",
+        "desc": "A personal portfolio website showcasing my profile and projects. Fully optimized for SEO, supports dark/light mode toggling, and integrates a seamless internationalization system (Next-intl).",
+        "tech": ["Next.js 15", "React", "Tailwind CSS", "TypeScript"],
+        "status": "live",
+        "github": "https://github.com/DuongDevv"
+      }
+    ]
   }
 }

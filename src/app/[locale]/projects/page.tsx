@@ -1,45 +1,17 @@
 import { getTranslations } from "next-intl/server";
 import { Github } from "lucide-react";
-import ProjectCard from "@/components/ui/ProjectCard"; // 🌟 Import component card có hiệu ứng
+import ProjectCard from "@/components/ui/ProjectCard"; 
 
-const projects = [
-  {
-    id: "portfolio",
-    emoji: "🌐",
-    titleKey: "proj1_title",
-    descKey: "proj1_desc",
-    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
-    status: "live",
-    github: "https://github.com/DuongDevv",
-  },
-  {
-    id: "webapp",
-    emoji: "📊",
-    titleKey: "proj2_title",
-    descKey: "proj2_desc",
-    tags: ["React.js", "Node.js", "MySQL", "REST API"],
-    status: "wip",
-    github: "https://github.com/DuongDevv",
-  },
-  {
-    id: "ui-lib",
-    emoji: "🎨",
-    titleKey: "proj3_title",
-    descKey: "proj3_desc",
-    tags: ["React", "Tailwind CSS", "TypeScript"],
-    status: "live",
-    github: "https://github.com/DuongDevv",
-  },
-  {
-    id: "desktop",
-    emoji: "🖥️",
-    titleKey: "proj4_title",
-    descKey: "proj4_desc",
-    tags: ["C#", "VS 2022", "SQL Server", ".NET"],
-    status: "wip",
-    github: "https://github.com/DuongDevv",
-  },
-];
+// 🌟 Định nghĩa kiểu dữ liệu (TypeScript Type) cho dự án để code không bị lỗi đỏ
+interface ProjectItem {
+  id: string;
+  emoji: string;
+  title: string;
+  desc: string;
+  tags: string[];
+  status: "live" | "wip";
+  github: string;
+}
 
 export default async function ProjectsPage({
   params,
@@ -48,6 +20,9 @@ export default async function ProjectsPage({
 }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "projects" });
+
+  // 🌟 Thần chú chuẩn Senior: Bốc nguyên mảng động từ file JSON ra ngoài!
+  const projectList: ProjectItem[] = t.raw("list");
 
   return (
     <div className="max-w-5xl mx-auto px-12 md:px-24 py-16">
@@ -64,15 +39,15 @@ export default async function ProjectsPage({
         </p>
       </div>
 
-      {/* Grid Cards áp dụng hiệu ứng Motion */}
+      {/* Grid Cards tự động lặp theo mảng JSON */}
       <div className="grid md:grid-cols-2 gap-4 mb-10">
-        {projects.map((proj, index) => (
+        {projectList.map((proj, index) => (
           <ProjectCard
             key={proj.id}
             emoji={proj.emoji}
-            index={index} // Truyền index vào để xử lý hiệu ứng so le mượt mà
-            title={t(proj.titleKey)}
-            description={t(proj.descKey)}
+            index={index} 
+            title={proj.title}
+            description={proj.desc}
             tags={proj.tags}
             githubUrl={proj.github}
             isLive={proj.status === "live"}
