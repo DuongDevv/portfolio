@@ -14,7 +14,7 @@ interface ProjectCardProps {
   index: number;
 }
 
-export default function ProjectCard({ emoji, statusText, isLive, title, description, tags, githubUrl, index }: ProjectCardProps) {
+export default function ProjectCard({ emoji, statusText, isLive, title, description, tags = [], githubUrl, index }: ProjectCardProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -51,7 +51,7 @@ export default function ProjectCard({ emoji, statusText, isLive, title, descript
 
         {/* Danh sách các Tags công nghệ */}
         <div className="flex flex-wrap gap-1.5 mb-6">
-          {tags.map((tag) => (
+          {tags?.map((tag) => (
             <span 
               key={tag} 
               className="text-[10px] font-semibold bg-gray-50 dark:bg-[rgba(255,255,255,0.03)] border border-gray-200/60 dark:border-gray-800 text-gray-600 dark:text-[#9494b0] px-2.5 py-1 rounded-md transition-colors group-hover:border-[#6c63ff]/20 dark:group-hover:border-[#a78bfa]/20"

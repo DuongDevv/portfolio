@@ -61,22 +61,22 @@
     "statusWip": "Đang phát triển",
     "list": [
       {
-        "id": "clothing-store",
+        "id": "Fashion-POS",
         "emoji": "🖥️",
-        "title": "Hệ thống Quản lý Cửa hàng Quần áo",
-        "desc": "Ứng dụng Desktop quản lý kho, doanh thu và nhân viên cho cửa hàng thời trang. Xử lý tối ưu câu lệnh truy vấn dữ liệu lớn, phân quyền tài khoản và thiết kế giao diện WinForms trực quan.",
+        "title": "Fashion POS - Phần mềm bán quần áo",
+        "desc": "Phần mềm POS quản lý kho, doanh thu và nhân viên cho cửa hàng thời trang. Xử lý tối ưu câu lệnh truy vấn dữ liệu lớn, phân quyền tài khoản và thiết kế giao diện WinForms trực quan.",
         "tags": ["C#", "WinForms", "SQL Server", "Stored Procedure"],
         "status": "wip",
-        "github": "https://github.com/DuongDevv"
+        "github": "https://github.com/DuongDevv/FashionPos.git"
       },
       {
         "id": "portfolio",
         "emoji": "🌐",
-        "title": "Personal Portfolio Website",
+        "title": "Trang cá nhân - Personal Portfolio",
         "desc": "Trang web giới thiệu bản thân và sản phẩm cá nhân. Tối ưu SEO, hỗ trợ giao diện Dark/Light Mode và tích hợp hệ thống đa ngôn ngữ (Next-intl) mượt mà.",
         "tags": ["Next.js 15", "React", "Tailwind CSS", "TypeScript"],
         "status": "live",
-        "github": "https://github.com/DuongDevv"
+        "github": "https://github.com/DuongDevv/portfolio.git"
       }
     ]
   }

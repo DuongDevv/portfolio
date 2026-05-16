@@ -81,13 +81,16 @@ export default function Navbar() {
           {locale === "vi" ? "VI → EN" : "EN → VI"}
         </button>
 
-        {/* Hire Me */}
-        <Link
-          href={`/${locale}/contact`}
-          className="bg-[#6c63ff] text-white font-bold px-5 py-2 rounded-lg text-[13px] hover:bg-[#5b52e0] transition-colors"
+        {/* 🌟 NÂNG CẤP: Biến nút Hire Me thành nút Tải CV tự động */}
+        <a
+          href="/Nguyen_Quoc_Duong_CV.pdf" // 🌟 Trỏ thẳng vào file PDF nằm trong thư mục public/
+          download="Nguyen_Quoc_Duong_CV.pdf" // 🌟 Thần chú ép trình duyệt tự động tải xuống
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-[#6c63ff] text-white font-bold px-5 py-2 rounded-lg text-[13px] hover:bg-[#5b52e0] hover:scale-105 active:scale-95 transition-all shadow-md inline-flex items-center gap-1 cursor-pointer"
         >
-          {locale === "vi" ? "Thuê mình →" : "Hire Me →"}
-        </Link>
+          <span>{locale === "vi" ? "Tải CV 📄" : "Download CV 📄"}</span>
+        </a>
       </div>
     </nav>
   );

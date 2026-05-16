@@ -21,11 +21,34 @@ const dmMono = DM_Mono({
 const locales = ["vi", "en"];
 
 // 🌟 Thêm hàm generateMetadata động chuẩn Senior để đổi chữ trên Tab trình duyệt
+// 🌟 Thêm hàm generateMetadata động chuẩn Senior có cả Open Graph hỗ trợ hiển thị ảnh khi share link
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
+  
+  const title = locale === "vi" ? "Nguyễn Quốc Đương | Portfolio" : "Nguyen Quoc Duong | Portfolio";
+  const description = locale === "vi" 
+    ? "Frontend Developer Intern/Fresher - Sinh viên CNTT Cao đẳng Kỹ thuật Cao Thắng. Chuyên sâu về React, Next.js, TypeScript và có tư duy logic hệ thống vững chắc."
+    : "Frontend Developer Intern/Fresher - Student at Cao Thang Technical College. Specialize in React, Next.js, TypeScript with solid logical thinking.";
+
   return {
-    title: locale === "vi" ? "Nguyễn Quốc Đương - Portfolio" : "Nguyen Quoc Duong - Portfolio",
-    description: "Frontend Developer Portfolio built with Next.js & Tailwind CSS",
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      url: "https://duongdevv.vercel.app",
+      siteName: "Nguyen Quoc Duong Portfolio",
+      images: [
+        {
+          url: "/icon.png", // 🌟 Trình duyệt sẽ bốc file icon.png trong thư mục public/app làm ảnh đại diện khi share link
+          width: 800,
+          height: 800,
+          alt: "Nguyen Quoc Duong Portfolio Avatar",
+        },
+      ],
+      locale: locale === "vi" ? "vi_VN" : "en_US",
+      type: "website",
+    },
   };
 }
 
