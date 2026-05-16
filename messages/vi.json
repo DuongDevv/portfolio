@@ -1,0 +1,44 @@
+{
+  "nav": {
+    "home": "Trang chủ",
+    "about": "Giới thiệu về mình",
+    "projects": "Dự án",
+    "experience": "Kinh nghiệm",
+    "blog": "Blog",
+    "contact": "Liên hệ",
+    "hireMe": "Thuê mình"
+  },
+  "hero": {
+    "badge": "Đang tìm Fresher / Intern · TP.HCM",
+    "role": "Frontend Developer",
+    "bio": "Một lập trình viên cần cù bù siêng năng — có làm thì mới có ăn. Đang theo học chuyên ngành Web tại Trường CĐ Kỹ thuật Cao Thắng, chuyên sâu về Frontend với hệ sinh thái Next.js · React · TypeScript.",
+    "viewProjects": "Xem Projects",
+    "contactMe": "Liên hệ mình"
+  },
+  "about": {
+    "title": "Giới thiệu",
+    "subtitle": "Developer, người học hỏi không ngừng nghỉ",
+    "bio1": "Xin chào! Mình là Nguyễn Quốc Đương, một Frontend Developer đang chuyên sâu về hệ sinh thái Next.js — React, Node.js, TypeScript.",
+    "bio2": "Đam mê xây dựng các ứng dụng web tối ưu hiệu suất và giải quyết các bài toán hệ thống phức tạp.",
+    "bio3": "Ngoài giờ code, mình dành thời gian nghiên cứu thêm nhiều kỹ năng mới để không ngừng phát triển bản thân.",
+    "education": "CĐ Kỹ thuật Cao Thắng · Chuyên ngành Web · TP.HCM",
+    "contactTitle": "Liên hệ",
+    "locationTitle": "Vị trí",
+    "locationValue": "TP. Hồ Chí Minh, Việt Nam"
+  },
+  "projects": {
+    "pageTitle": "Dự án cá nhân",
+    "pageSubtitle": "Những sản phẩm mình đã xây dựng với tất cả đam mê",
+    "viewAll": "Xem tất cả trên GitHub",
+    "statusLive": "Live",
+    "statusWip": "Đang làm",
+    "proj1_title": "Personal Portfolio",
+    "proj1_desc": "Trang portfolio cá nhân responsive, tối ưu SEO với hiệu ứng mượt mà. Hỗ trợ đa ngôn ngữ VI/EN.",
+    "proj2_title": "Web App Quản Lý",
+    "proj2_desc": "Ứng dụng web full-stack với giao diện hiện đại, quản lý state hiệu quả và tích hợp backend Node.js + MySQL.",
+    "proj3_title": "UI Component Library",
+    "proj3_desc": "Bộ thư viện UI components tái sử dụng xây dựng với Tailwind CSS, hỗ trợ dark mode và responsive.",
+    "proj4_title": "C# Desktop App",
+    "proj4_desc": "Ứng dụng desktop quản lý dữ liệu quần áo bằng C# và Visual Studio 2022, kết nối cơ sở dữ liệu SQL Server."
+  }
+}
