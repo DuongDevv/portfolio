@@ -34,7 +34,7 @@ export default async function ExperiencePage({ params }: { params: Promise<{ loc
     <div className="max-w-5xl mx-auto px-12 md:px-24 py-16 bg-white dark:bg-[#09090f] text-gray-900 dark:text-white transition-colors duration-300">
       <div className="mb-12">
         <p className="text-[10px] font-bold tracking-[3px] uppercase text-[#6c63ff] dark:text-[#a78bfa] mb-2">Timeline</p>
-        <h1 className="text-3xl md:text-4xl font-extrabold mb-2">{locale === "vi" ? "Kinh nghiệm & Học văn" : "Experience & Education"}</h1>
+        <h1 className="text-3xl md:text-4xl font-extrabold mb-2">{locale === "vi" ? "Kinh nghiệm & Học vấn" : "Experience & Education"}</h1>
         <p className="text-sm text-gray-500 dark:text-[#9494b0]">{locale === "vi" ? "Hành trình phát triển kiến thức của mình" : "My professional journey"}</p>
       </div>
 
