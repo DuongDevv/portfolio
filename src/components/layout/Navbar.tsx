@@ -17,6 +17,7 @@ export default function Navbar() {
     { label: locale === "vi" ? "Về mình"      : "About",      href: `/${locale}/about` },
     { label: locale === "vi" ? "Dự án"        : "Projects",   href: `/${locale}/projects` },
     { label: locale === "vi" ? "Kinh nghiệm"  : "Experience", href: `/${locale}/experience` },
+    { label: locale === "vi" ? "Kỹ năng"  : "Skills", href: `/${locale}/skills` },
     { label: locale === "vi" ? "Blog"          : "Blog",       href: `/${locale}/blog` },
     { label: locale === "vi" ? "Liên hệ"      : "Contact",    href: `/${locale}/contact` },
   ];

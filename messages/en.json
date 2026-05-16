@@ -8,13 +8,19 @@
     "contact": "Contact",
     "hireMe": "Hire Me"
   },
+
   "hero": {
+    "name": "Duong Nguyen Quoc",
     "badge": "Open to Intern / Fresher Frontend Roles · Ho Chi Minh City",
     "role": "Frontend Developer",
     "bio": "A practical developer who believes in learning by doing. Currently an IT student at Cao Thang Technical College, specializing in the Next.js ecosystem — React, TypeScript, Tailwind CSS, backed by a strong data-processing foundation from C# and SQL Server.",
     "viewProjects": "View Projects",
-    "contactMe": "Contact Me"
+    "contactMe": "Contact Me",
+    "statSkills": "SKILLS & TECH",
+    "statLearning": "SELF-LEARNING SPIRIT",
+    "statCoding": "RESEARCH & CODING"
   },
+
   "about": {
     "title": "About Me",
     "subtitle": "Logic-driven developer, continuous learner",
@@ -24,8 +30,33 @@
     "education": "Cao Thang Technical College · Information Technology",
     "contactTitle": "Contact",
     "locationTitle": "Location",
-    "locationValue": "Ho Chi Minh City, Vietnam"
+    "locationValue": "Ho Chi Minh City, Vietnam",
+    "philosophyTitle": "Learning Philosophy",
+    "aimTitle": "Direction & Passion"
   },
+
+  "blog": {
+    "pageTitle": "Technical Blog",
+    "pageSubtitle": "Where I write about technology and programming experiences",
+    "readMore": "Read post",
+    "posts": [
+      {
+        "title": "Guide to Configuring Internationalization (i18n) in Next.js 15/16 for Freshers",
+        "desc": "How to integrate next-intl into Next.js App Router, resolving SEO optimization and seamless language switching.",
+        "date": "15/05/2026",
+        "readTime": "5 min read",
+        "tags": ["Next.js", "i18n", "Frontend"]
+      },
+      {
+        "title": "Data Processing Mindset and JavaScript Clean Code for IT Students",
+        "desc": "How to write clean code, applying ES6+ effectively to practical problems instead of messy, unmaintainable patterns.",
+        "date": "10/05/2026",
+        "readTime": "7 min read",
+        "tags": ["JavaScript", "Clean Code", "Mindset"]
+      }
+    ]
+  },
+
   "experience": {
     "pageTitle": "Experience & Activities",
     "pageSubtitle": "My journey of sharpening practical programming skills through projects and competitions",
@@ -53,6 +84,17 @@
       }
     ]
   },
+
+  "skills": {
+    "pageTitle": "Tech Stack & Skills",
+    "pageSubtitle": "The tools and technologies I use to bring ideas to life",
+    "categories": {
+      "frontend": "FrontEnd Development",
+      "logicDb": "Logic & Databases",
+      "tools": "Tools & Ecosystem"
+    }
+  },
+
   "projects": {
     "pageTitle": "Personal & Academic Projects",
     "pageSubtitle": "Things I've built with passion, dedication, and logical thinking",

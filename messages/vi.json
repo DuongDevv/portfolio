@@ -8,13 +8,19 @@
     "contact": "Liên hệ",
     "hireMe": "Thuê mình"
   },
+
   "hero": {
+    "name": "Nguyễn Quốc Đương",
     "badge": "Sẵn sàng thực tập (Intern / Fresher) · TP. Hồ Chí Minh",
     "role": "Frontend Developer",
     "bio": "Một lập trình viên thực chiến với tư duy 'học qua làm'. Hiện là sinh viên CNTT tại Cao đẳng Kỹ thuật Cao Thắng, tập trung chuyên sâu vào hệ sinh thái Next.js — React, TypeScript, Tailwind CSS và có nền tảng tư duy xử lý dữ liệu vững chắc từ C#/SQL Server.",
     "viewProjects": "Xem dự án",
-    "contactMe": "Liên hệ với mình"
+    "contactMe": "Liên hệ với mình",
+    "statSkills": "KỸ NĂNG & CÔNG NGHỆ",
+    "statLearning": "TINH THẦN TỰ HỌC",
+    "statCoding": "NGHIÊN CỨU & CODE"
   },
+
   "about": {
     "title": "Về mình",
     "subtitle": "Developer lập trình bằng tư duy, không ngừng học hỏi",
@@ -24,8 +30,33 @@
     "education": "Cao đẳng Kỹ thuật Cao Thắng · Công nghệ Thông tin",
     "contactTitle": "Liên hệ",
     "locationTitle": "Vị trí",
-    "locationValue": "TP. Hồ Chí Minh, Việt Nam"
+    "locationValue": "TP. Hồ Chí Minh, Việt Nam",
+    "philosophyTitle": "Triết lý học tập",
+    "aimTitle": "Định hướng & Đam mê"
   },
+
+  "blog": {
+    "pageTitle": "Technical Blog",
+    "pageSubtitle": "Nơi mình chia sẻ kiến thức và trải nghiệm công nghệ",
+    "readMore": "Đọc bài viết",
+    "posts": [
+      {
+        "title": "Hướng dẫn cấu hình Đa ngôn ngữ (i18n) trong Next.js 15/16 chuẩn Fresher",
+        "desc": "Chia sẻ cách tích hợp next-intl vào hệ sinh thái Next.js App Router, giải quyết các bài toán tối ưu SEO và chuyển đổi mượt mà giữa các quốc gia.",
+        "date": "15/05/2026",
+        "readTime": "5 phút đọc",
+        "tags": ["Next.js", "i18n", "Frontend"]
+      },
+      {
+        "title": "Tư duy xử lý dữ liệu và Clean Code JavaScript cho Sinh viên CNTT",
+        "desc": "Làm thế nào để viết code gọn gàng, áp dụng ES6+ hiệu quả vào các bài toán thực tế thay vì tư duy code rườm rà, khó bảo trì.",
+        "date": "10/05/2026",
+        "readTime": "7 phút đọc",
+        "tags": ["JavaScript", "Clean Code", "Tư duy"]
+      }
+    ]
+  },
+
   "experience": {
     "pageTitle": "Kinh nghiệm & Hoạt động",
     "pageSubtitle": "Hành trình tích lũy kiến thức, rèn luyện tư duy thực chiến qua các đồ án và cuộc thi",
@@ -53,6 +84,17 @@
       }
     ]
   },
+
+  "skills": {
+    "pageTitle": "Công nghệ & Kỹ năng",
+    "pageSubtitle": "Những công cụ và công nghệ mình sử dụng để hiện thực hóa các ý tưởng",
+    "categories": {
+      "frontend": "Phát triển FrontEnd",
+      "logicDb": "Tư duy Logic & Cơ sở dữ liệu",
+      "tools": "Công cụ & Hệ sinh thái"
+    }
+  },
+
   "projects": {
     "pageTitle": "Dự án cá nhân & Học tập",
     "pageSubtitle": "Những sản phẩm mình đã xây dựng với tất cả đam mê và tư duy logic",
