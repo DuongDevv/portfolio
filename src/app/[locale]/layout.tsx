@@ -20,8 +20,6 @@ const dmMono = DM_Mono({
 
 const locales = ["vi", "en"];
 
-// 🌟 Thêm hàm generateMetadata động chuẩn Senior để đổi chữ trên Tab trình duyệt
-// 🌟 Thêm hàm generateMetadata động chuẩn Senior có cả Open Graph hỗ trợ hiển thị ảnh khi share link
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   
@@ -40,7 +38,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       siteName: "Nguyen Quoc Duong Portfolio",
       images: [
         {
-          url: "/icon.png", // 🌟 Trình duyệt sẽ bốc file icon.png trong thư mục public/app làm ảnh đại diện khi share link
+          url: "/icon.png", 
           width: 800,
           height: 800,
           alt: "Nguyen Quoc Duong Portfolio Avatar",
@@ -64,14 +62,13 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} suppressHydrationWarning> 
-      <body className={`${syne.variable} ${dmMono.variable} bg-white dark:bg-[#09090f] text-black dark:text-white antialiased transition-colors duration-300`}>
+    <html lang={locale} suppressHydrationWarning className="bg-white dark:bg-[#09090f] overscroll-none"> 
+      <body className={`${syne.variable} ${dmMono.variable} font-sans antialiased bg-white dark:bg-[#09090f] pt-[60px] transition-colors duration-300`}>
         <NextIntlClientProvider messages={messages}>
-          <ThemeProvider> 
-            <Navbar/>
-            <div className="pt-[60px]">
-              {children}
-            </div>
+          {/* 🌟 VÁ TẠI ĐÂY: Thêm lại đầy đủ các thuộc tính cấu hình cho ThemeProvider */}
+          <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+            <Navbar />
+            <main>{children}</main>
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>

@@ -1,18 +1,25 @@
-import { getTranslations } from "next-intl/server";
+"use client"; // 🌟 THẦN CHÚ 1: Biến file này thành Client Component
+
+import { use } from "react"; // 🌟 Dùng để giải nén params dạng Promise ở Client
+import { useTranslations } from "next-intl"; // 🌟 THẦN CHÚ 2: Hook dịch thuật chạy thẳng dưới trình duyệt
 import { 
   Code2, Layout, Server, Database, 
   Terminal, Monitor, Brain, CheckCircle2 
 } from "lucide-react";
+import { motion } from "framer-motion";
 
-export default async function SkillsPage({
+export default function SkillsPage({
   params,
 }: {
   params: Promise<{ locale: string }>;
 }) {
-  const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "skills" });
+  // Ở Client Component của Next.js 15+, params là một Promise nên ta dùng hàm use() để giải nén
+  use(params);
+  
+  // 🌟 Dùng hook useTranslations (đồng bộ, KHÔNG CẦN AWAIT nữa!)
+  const t = useTranslations("skills");
 
-  // 🌟 Cấu trúc 7 nhóm kỹ năng chuẩn đét theo ảnh mẫu của anh Ngọc
+  // Bộ mảng tĩnh giữ nguyên cấu trúc
   const skillMatrix = [
     {
       title: t("categories.languages"),
@@ -23,7 +30,6 @@ export default async function SkillsPage({
         { name: "TypeScript", color: "hover:text-[#3178c6] hover:border-[#3178c6]/30" },
         { name: "C#", color: "hover:text-[#239120] hover:border-[#239120]/30" },
         { name: "C++", color: "hover:text-[#00599c] hover:border-[#00599c]/30" },
-        { name: "Python", color: "hover:text-[#00599c] hover:border-[#00599c]/30" },
       ]
     },
     {
@@ -44,7 +50,6 @@ export default async function SkillsPage({
       glow: "hover:border-emerald-500/30 dark:hover:bg-emerald-500/5",
       items: [
         { name: "Node.js", color: "hover:text-[#339933] hover:border-[#339933]/30" },
-        { name: "Express.js", color: "hover:text-[#339933] hover:border-[#339933]/30" },
         { name: "WinForms Application", color: "hover:text-[#512bd4] hover:border-[#512bd4]/30" },
       ]
     },
@@ -54,7 +59,6 @@ export default async function SkillsPage({
       glow: "hover:border-amber-500/30 dark:hover:bg-amber-500/5",
       items: [
         { name: "SQL Server", color: "hover:text-[#cc292b] hover:border-[#cc292b]/30" },
-        { name: "My SQL", color: "hover:text-[#cc292b] hover:border-[#cc292b]/30" },
       ]
     },
     {
@@ -90,16 +94,13 @@ export default async function SkillsPage({
   ];
 
   return (
-    <div className="max-w-6xl mx-auto px-8 md:px-16 py-20 relative overflow-hidden select-none min-h-screen text-black dark:text-white bg-white dark:bg-[#09090f] transition-colors duration-300">
-      
-      {/* Nền lưới mờ (Grid Overlay) tinh tế giống ảnh mẫu */}
+    <div className="max-w-6xl mx-auto px-8 md:px-50 py-20 relative overflow-hidden select-none min-h-screen text-black dark:text-white bg-white dark:bg-[#09090f] transition-colors duration-300">
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
 
-      {/* Header */}
-      <div className="mb-14 relative z-10">
-        <div className="inline-flex items-center gap-1.5 bg-purple-50 dark:bg-[#11111e] border border-purple-100 dark:border-gray-800 text-[#6c63ff] dark:text-[#a78bfa] text-[10px] font-bold tracking-[3px] uppercase px-3 py-1 rounded-md mb-3 font-mono">
+      <div className="mb-5 relative z-20">
+        <div className="inline-flex items-center gap-1.5 bg-purple-50 dark:bg-[#11111e] border border-purple-100 dark:border-gray-800 text-[#6c63ff] dark:text-[#a78bfa] text-[10px] font-bold tracking-[3px] uppercase px-3 py-1 rounded-md mb-3 text-[#6c63ff] mb-2">
           <CheckCircle2 size={11} />
-          Abilities
+          Tech Stack
         </div>
         <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white tracking-tight mb-2">
           {t("pageTitle")}
@@ -109,31 +110,32 @@ export default async function SkillsPage({
         </p>
       </div>
 
-      {/* Grid tự động căn chỉnh khoảng cách các khối (Responsive Columns Layout) */}
+      {/* Grid tự động căn chỉnh khoảng cách các khối */}
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 relative z-10">
-        {skillMatrix.map((block) => (
-          <div 
+        {skillMatrix.map((block, index) => (
+          <motion.div 
             key={block.title} 
+            // 🌟 CẤU HÌNH HIỆU ỨNG SO LE (STAGGER):
+            initial={{ y: 30, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.4, delay: index * 0.08, ease: "easeOut" }} // Ô sau lên trễ hơn ô trước 0.08 giây
+            
             className={`bg-gray-50/40 dark:bg-[#0d0d18]/40 border border-gray-100 dark:border-[#1c1c2e] rounded-2xl p-5 shadow-sm transition-all duration-300 ${block.glow}`}
           >
-            {/* Tiêu đề nhóm nhỏ */}
+            {/* ... Toàn bộ phần ruột bên trong của cái Card giữ nguyên vẹn tăm tắp ... */}
             <div className="flex items-center gap-2.5 mb-4 border-b border-gray-100 dark:border-[#1c1c2e]/60 pb-3">
               {block.icon}
               <h3 className="text-[13px] font-bold tracking-wide uppercase text-gray-800 dark:text-gray-200">{block.title}</h3>
             </div>
-
-            {/* Vòng lặp 2: Vẽ các tags công nghệ nhỏ bên trong */}
             <div className="flex flex-wrap gap-2">
               {block.items.map((item) => (
-                <div 
-                  key={item.name}
-                  className={`text-[12px] font-medium text-gray-600 dark:text-[#9494b0] bg-white dark:bg-[#09090f] border border-gray-100/80 dark:border-[#161625] px-3 py-2 rounded-xl transition-all duration-200 cursor-default shadow-sm ${item.color}`}
-                >
+                <div key={item.name} className={`text-[12px] font-medium text-gray-600 dark:text-[#9494b0] bg-white dark:bg-[#09090f] border border-gray-100/80 dark:border-[#161625] px-3 py-2 rounded-xl transition-all duration-200 cursor-default shadow-sm ${item.color}`}>
                   {item.name}
                 </div>
               ))}
             </div>
-          </div>
+
+          </motion.div>
         ))}
       </div>
     </div>

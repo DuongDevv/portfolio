@@ -26,15 +26,14 @@
   },
 
   "about": {
+    "sectionLabel": "Profile",
     "title": "About Me",
     "subtitle": "Logic-driven developer, continuous learner",
+    "education": "Cao Thang Technical College · Information Technology",
+    "locationValue": "Ho Chi Minh City, Vietnam",
     "bio1": "Hello! I'm Nguyen Quoc Duong, a Frontend Developer dedicated to building high-performance web applications with seamless user experiences.",
     "bio2": "Instead of just learning frameworks superficially, I always dive deep into the core mechanics of JavaScript/React and practice writing Clean Code.",
     "bio3": "Outside of coding, I focus on UI/UX principles, system optimization, and engaging in tech activities to sharpen my teamwork skills.",
-    "education": "Cao Thang Technical College · Information Technology",
-    "contactTitle": "Contact",
-    "locationTitle": "Location",
-    "locationValue": "Ho Chi Minh City, Vietnam",
     "philosophyTitle": "Learning Philosophy",
     "aimTitle": "Direction & Passion"
   },

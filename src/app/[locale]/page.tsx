@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server";
-import Link from "next/link"; 
-import { ArrowRight, Code2, Layers, Cpu } from "lucide-react";
+import Link from "next/link";
+import { ArrowRight, Code2, Cpu } from "lucide-react";
 
 export default async function HomePage({
   params,

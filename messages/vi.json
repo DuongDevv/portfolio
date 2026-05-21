@@ -26,15 +26,14 @@
   },
 
   "about": {
+    "sectionLabel": "Profile",
     "title": "Về mình",
     "subtitle": "Developer lập trình bằng tư duy, không ngừng học hỏi",
+    "education": "Học vấn",
+    "locationValue": "Hồ Chí Minh, Việt Nam",
     "bio1": "Xin chào! Mình là Nguyễn Quốc Đương, một Frontend Developer với định hướng xây dựng các sản phẩm web chất lượng cao, tối ưu hiệu năng và trải nghiệm người dùng.",
     "bio2": "Thay vì học vẹt công nghệ, mình luôn đào sâu bản chất cốt lõi của JavaScript/React và rèn luyện tư duy tổ chức mã nguồn sạch sẽ (Clean Code).",
     "bio3": "Ngoài thời gian code, mình thích nghiên cứu về UI/UX, tối ưu hóa hệ thống và tham gia các hoạt động công nghệ để nâng cao kỹ năng teamwork.",
-    "education": "Cao đẳng Kỹ thuật Cao Thắng · Công nghệ Thông tin",
-    "contactTitle": "Liên hệ",
-    "locationTitle": "Vị trí",
-    "locationValue": "TP. Hồ Chí Minh, Việt Nam",
     "philosophyTitle": "Triết lý học tập",
     "aimTitle": "Định hướng & Đam mê"
   },

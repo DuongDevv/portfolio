@@ -10,7 +10,8 @@ export default function ThemeToggle() {
 
     // Chỉ kích hoạt hiển thị sau khi component đã mounted trên client
     useEffect(() => {
-        setMounted(true);
+        const timer = window.setTimeout(() => setMounted(true), 0);
+        return () => window.clearTimeout(timer);
     }, []);
 
     if (!mounted) {
