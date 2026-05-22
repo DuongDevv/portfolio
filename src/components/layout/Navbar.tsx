@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X, FileText, Globe } from "lucide-react"; 
 import ThemeToggle from "@/components/ui/ThemeToggle";
+import { motion } from "framer-motion";
 
 // 🌟 TỐI ƯU SENIOR: Đưa mảng cấu hình ra hẳn ngoài Component để tránh re-render thừa và cố định Scope
 const getNavItems = (locale: string) => [
@@ -44,6 +45,12 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // 🌟 TỐI ƯU SENIOR: Tự động reset lại trạng thái Navbar về mặc định mỗi khi nhảy sang trang mới
+  useEffect(() => {
+    setHidden(false);
+    setScrolled(false);
+  }, [pathname]);
+
   // Đóng menu di động khi người dùng chuyển trang
   useEffect(() => {
     if (!isOpen) return;
@@ -62,12 +69,15 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className={`
+      <motion.nav 
+        initial={{ y: -100 }}
+        animate={{ y: hidden ? "-100%" : 0 }}
+        transition={{ duration: 0.4, ease: "easeOut" }}
+        className={`
         fixed top-0 left-0 right-0 z-50
         flex items-center justify-between
         px-5 md:px-16 h-[60px]
-        border-b transition-all duration-300 select-none
-        ${hidden ? "-translate-y-full" : "translate-y-0"}
+        border-b transition-colors duration-300 select-none
         ${scrolled 
           ? "bg-white dark:bg-[#09090f] border-gray-200 dark:border-zinc-800/80 shadow-sm" 
           : "bg-white dark:bg-[#09090f] border-transparent dark:border-transparent"}
@@ -80,7 +90,7 @@ export default function Navbar() {
         {/* 💻 PC: Nav links */}
         <ul className="hidden md:flex items-center gap-6">
           {NAV_ITEMS.map(({ label, href }) => (
-            <li key={href}>
+            <li key={href} className="relative py-1">
               <Link
                 href={href}
                 prefetch={true}
@@ -92,6 +102,15 @@ export default function Navbar() {
               >
                 {label}
               </Link>
+              
+              {/* 🌟 TỐI ƯU SENIOR: Hiệu ứng gạch chân trượt mượt mà (Shared Layout Animation) */}
+              {pathname === href && (
+                <motion.div
+                  layoutId="active-nav-link"
+                  className="absolute left-0 right-0 -bottom-1 h-[2px] bg-[#6c63ff] dark:bg-[#a78bfa] rounded-full"
+                  transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                />
+              )}
             </li>
           ))}
         </ul>
@@ -100,6 +119,7 @@ export default function Navbar() {
         <div className="hidden md:flex items-center gap-3">
           <ThemeToggle />
           <button
+            aria-label="Toggle Locale"
             onClick={toggleLocale}
             className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-gray-200 dark:border-[#252538] text-gray-500 dark:text-[#9494b0] text-[12px] font-bold hover:border-[#6c63ff] dark:hover:border-[#a78bfa] hover:text-[#6c63ff] dark:hover:text-white transition-all"
           >
@@ -120,13 +140,14 @@ export default function Navbar() {
         <div className="flex md:hidden items-center gap-3 z-50">
           <ThemeToggle />
           <button 
+            aria-label="Toggle Mobile Menu"
             onClick={() => setIsOpen((prev) => !prev)}
             className="text-gray-600 dark:text-[#9494b0] p-1.5 hover:text-black dark:hover:text-white transition-colors"
           >
             {isOpen ? <X size={22} /> : <Menu size={22} />}
           </button>
         </div>
-      </nav>
+      </motion.nav>
 
       {/* 📱 MOBILE: Menu trượt từ trên xuống bao phủ màn hình */}
       <div className={`

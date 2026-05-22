@@ -3,7 +3,7 @@
 import { use } from "react"; // 🌟 Dùng để giải nén params dạng Promise ở Client
 import { useTranslations } from "next-intl"; // 🌟 THẦN CHÚ 2: Hook dịch thuật chạy thẳng dưới trình duyệt
 import { 
-  Code2, Layout, Server, Database, 
+  Code2, Layout, Server, Database, AppWindow,
   Terminal, Monitor, Brain, CheckCircle2 
 } from "lucide-react";
 import { motion } from "framer-motion";
@@ -30,6 +30,8 @@ export default function SkillsPage({
         { name: "TypeScript", color: "hover:text-[#3178c6] hover:border-[#3178c6]/30" },
         { name: "C#", color: "hover:text-[#239120] hover:border-[#239120]/30" },
         { name: "C++", color: "hover:text-[#00599c] hover:border-[#00599c]/30" },
+        { name: "Python", color: "hover:text-[#00599c] hover:border-[#00599c]/30" },
+        { name: "PHP", color: "hover:text-[#00599c] hover:border-[#00599c]/30" },
       ]
     },
     {
@@ -50,7 +52,16 @@ export default function SkillsPage({
       glow: "hover:border-emerald-500/30 dark:hover:bg-emerald-500/5",
       items: [
         { name: "Node.js", color: "hover:text-[#339933] hover:border-[#339933]/30" },
-        { name: "WinForms Application", color: "hover:text-[#512bd4] hover:border-[#512bd4]/30" },
+        { name: "Express.js", color: "hover:text-[#339933] hover:border-[#339933]/30" },
+        { name: "C# / ASP.NET", color: "hover:text-[#512bd4] hover:border-[#512bd4]/30" },
+      ]
+    },
+    {
+      title: t("categories.desktop"),
+      icon: <AppWindow size={18} className="text-indigo-500" />,
+      glow: "hover:border-indigo-500/30 dark:hover:bg-indigo-500/5",
+      items: [
+        { name: "WinForms Application", color: "hover:text-indigo-600 dark:hover:text-indigo-400 hover:border-indigo-500/30" },
       ]
     },
     {
@@ -94,24 +105,23 @@ export default function SkillsPage({
   ];
 
   return (
-    <div className="max-w-6xl mx-auto px-8 md:px-50 py-20 relative overflow-hidden select-none min-h-screen text-black dark:text-white bg-white dark:bg-[#09090f] transition-colors duration-300">
+    <div className="max-w-6xl mx-auto px-12 md:px-24 py-16 relative overflow-hidden select-none min-h-screen text-black dark:text-white bg-white dark:bg-[#09090f] transition-colors duration-300">
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
 
-      <div className="mb-5 relative z-20">
-        <div className="inline-flex items-center gap-1.5 bg-purple-50 dark:bg-[#11111e] border border-purple-100 dark:border-gray-800 text-[#6c63ff] dark:text-[#a78bfa] text-[10px] font-bold tracking-[3px] uppercase px-3 py-1 rounded-md mb-3 text-[#6c63ff] mb-2">
-          <CheckCircle2 size={11} />
+      <div className="mb-10 relative z-20">
+        <p className="text-[10px] font-bold tracking-[3px] uppercase text-[#6c63ff] mb-2">
           Tech Stack
-        </div>
-        <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white tracking-tight mb-2">
+        </p>
+        <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white mb-2">
           {t("pageTitle")}
         </h1>
-        <p className="text-xs md:text-sm text-[#9494b0] max-w-xl">
+        <p className="text-sm text-[#9494b0]">
           {t("pageSubtitle")}
         </p>
       </div>
 
-      {/* Grid tự động căn chỉnh khoảng cách các khối */}
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 relative z-10">
+      {/* 🌟 CHUYỂN SANG MASONRY LAYOUT: Xếp gạch thẻ dồn lên khít nhau bằng CSS Columns */}
+      <div className="columns-1 sm:columns-2 lg:columns-3 gap-5 relative z-10">
         {skillMatrix.map((block, index) => (
           <motion.div 
             key={block.title} 
@@ -120,7 +130,8 @@ export default function SkillsPage({
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.4, delay: index * 0.08, ease: "easeOut" }} // Ô sau lên trễ hơn ô trước 0.08 giây
             
-            className={`bg-gray-50/40 dark:bg-[#0d0d18]/40 border border-gray-100 dark:border-[#1c1c2e] rounded-2xl p-5 shadow-sm transition-all duration-300 ${block.glow}`}
+            // 🌟 Thêm break-inside-avoid để thẻ không bị cắt đôi giữa 2 cột, mb-5 tạo khoảng cách dọc và w-full inline-block để giữ vững layout
+            className={`bg-gray-50/40 dark:bg-[#0d0d18]/40 border border-gray-100 dark:border-[#1c1c2e] rounded-2xl p-5 shadow-sm transition-all duration-300 ${block.glow} break-inside-avoid mb-5 inline-block w-full`}
           >
             {/* ... Toàn bộ phần ruột bên trong của cái Card giữ nguyên vẹn tăm tắp ... */}
             <div className="flex items-center gap-2.5 mb-4 border-b border-gray-100 dark:border-[#1c1c2e]/60 pb-3">

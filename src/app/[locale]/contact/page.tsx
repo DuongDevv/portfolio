@@ -6,9 +6,15 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
   return (
     <div className="max-w-5xl mx-auto px-12 md:px-24 py-16 bg-white dark:bg-[#09090f] text-gray-900 dark:text-white transition-colors duration-300">
       <div className="mb-12">
-        <p className="text-[10px] font-bold tracking-[3px] uppercase text-[#6c63ff] dark:text-[#a78bfa] mb-2">Get In Touch</p>
-        <h1 className="text-3xl md:text-4xl font-extrabold mb-2">{locale === "vi" ? "Kết nối với mình" : "Contact Me"}</h1>
-        <p className="text-sm text-gray-500 dark:text-[#9494b0]">{locale === "vi" ? "Hãy gửi tin nhắn cho mình nhé!" : "Let's connect!"}</p>
+        <p className="text-[10px] font-bold tracking-[3px] uppercase text-[#6c63ff] dark:text-[#a78bfa] mb-2">
+          Get In Touch
+        </p>
+        <h1 className="text-3xl md:text-4xl font-extrabold mb-2">
+          {locale === "vi" ? "Kết nối với mình" : "Contact Me"}
+        </h1>
+        <p className="text-sm text-gray-500 dark:text-[#9494b0]">
+          {locale === "vi" ? "Hãy gửi tin nhắn cho mình nhé!" : "Let's connect!"}
+        </p>
       </div>
 
       <div className="grid md:grid-cols-5 gap-6 items-start">

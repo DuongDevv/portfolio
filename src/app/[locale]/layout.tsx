@@ -63,9 +63,10 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} suppressHydrationWarning className="bg-white dark:bg-[#09090f] overscroll-none"> 
-      <body className={`${syne.variable} ${dmMono.variable} font-sans antialiased bg-white dark:bg-[#09090f] pt-[60px] transition-colors duration-300`}>
+      <body 
+        suppressHydrationWarning 
+        className={`${syne.variable} ${dmMono.variable} font-sans antialiased bg-white dark:bg-[#09090f] pt-[60px] transition-colors duration-300`}>
         <NextIntlClientProvider messages={messages}>
-          {/* 🌟 VÁ TẠI ĐÂY: Thêm lại đầy đủ các thuộc tính cấu hình cho ThemeProvider */}
           <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
             <Navbar />
             <main>{children}</main>

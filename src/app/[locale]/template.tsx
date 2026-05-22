@@ -1,15 +1,14 @@
-"use client"; // 🌟 Bắt buộc vì Framer Motion chạy dưới Trình duyệt (Client)
+"use client";
 
 import { motion } from "framer-motion";
 
 export default function Template({ children }: { children: React.ReactNode }) {
   return (
     <motion.div
-      className="min-h-screen w-full"
-      initial={{ y: 24, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      exit={{ y: -12, opacity: 0 }}
-      transition={{ ease: "easeOut", duration: 0.36 }}
+      initial={{ opacity: 0, y: 15 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.4, ease: "easeOut" }}
+      className="w-full"
     >
       {children}
     </motion.div>

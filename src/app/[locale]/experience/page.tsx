@@ -1,5 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { Briefcase, Calendar } from "lucide-react";
+import ScrollReveal from "@/components/ui/ScrollReveal";
 
 interface ExpItem {
   id: string;
@@ -22,8 +23,7 @@ export default async function ExperiencePage({
 
   return (
     <div className="max-w-5xl mx-auto px-12 md:px-24 py-16">
-      {/* Header */}
-      <div className="mb-12">
+      <div className="mb-10">
         <p className="text-[10px] font-bold tracking-[3px] uppercase text-[#6c63ff] mb-2">
           Timeline
         </p>
@@ -37,8 +37,9 @@ export default async function ExperiencePage({
 
       {/* Timeline Layout */}
       <div className="relative border-l border-gray-200 dark:border-[#1c1c2e] ml-4 md:ml-6 space-y-10">
-        {expList.map((exp) => (
-          <div key={exp.id} className="relative pl-8 group">
+        {expList.map((exp, index) => (
+          <ScrollReveal key={exp.id} delay={index * 0.15}>
+            <div className="relative pl-8 group">
             {/* Nút tròn Timeline có hiệu ứng hover đổi màu */}
             <div className="absolute -left-[17px] top-1.5 w-8 h-8 rounded-full bg-white dark:bg-[#0d0d18] border-2 border-gray-200 dark:border-[#1c1c2e] flex items-center justify-center text-gray-400 group-hover:border-[#6c63ff] group-hover:text-[#6c63ff] transition-colors duration-300 shadow-sm">
               <Briefcase size={14} />
@@ -70,7 +71,8 @@ export default async function ExperiencePage({
                 ))}
               </ul>
             </div>
-          </div>
+            </div>
+          </ScrollReveal>
         ))}
       </div>
     </div>

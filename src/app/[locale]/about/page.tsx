@@ -1,8 +1,8 @@
-"use client"; // 🌟 TỐI ƯU: Chạy Client Component siêu tốc, đồng bộ hiệu ứng trượt trang mượt mà
+"use client"; 
 
 import { use } from "react";
 import { useTranslations } from "next-intl";
-import Image from "next/image"; // 🌟 Dùng thẻ Image tối ưu dung lượng ảnh của Next.js
+import Image from "next/image";
 import { GraduationCap, MapPin, Mail, Sparkles, Github, Linkedin } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -15,48 +15,33 @@ export default function AboutPage({
   const t = useTranslations("about");
 
   return (
-    // 🌟 TỐI ƯU: Đổi py-20 thành pt-12 pb-20 để kéo toàn bộ nội dung lên sát đỉnh màn hình
-    <div className="min-h-screen bg-white dark:bg-[#09090f] text-slate-900 dark:text-slate-100 pt-20 pb-20 transition-colors duration-300">
-      <div className="mx-auto max-w-6xl px-6 md:px-12">
+    <div className="min-h-screen bg-white dark:bg-[#09090f] text-slate-900 dark:text-slate-100 py-16 transition-colors duration-300">
+      <div className="mx-auto max-w-6xl px-12 md:px-24">
         
-        {/* 🧠 KHỐI 1: TIÊU ĐỀ TRANG VÀ SLOGAN NẰM KẾ NHAU (ĐÃ FIX LỖI BAY CHỮ) */}
-        <motion.div 
-          initial={{ opacity: 0, y: 15 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          // 🌟 VÁ TẠI ĐÂY: Đổi md:items-baseline thành md:items-end và thêm md:pb-1 để slogan đứng đúng vị trí
-          className="mb-8 flex flex-col md:flex-row md:items-end md:gap-5 border-b border-slate-200/20 pb-4"
-        >
-          <div className="relative">
-            <p className="text-[10px] font-bold tracking-[3px] uppercase text-[#6c63ff] mb-2">
-              {t("sectionLabel") ?? "Profile"}
-            </p>
-            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-950 dark:text-white leading-none">
-              {t("title")}
-            </h1>
-          </div>
-          
-          {/* 🌟 VÁ TẠI ĐÂY: Thêm md:mb-1 để chân chữ slogan thẳng băng với chân chữ About Me, không bao giờ lo bị dính Navbar */}
-          <p className="text-sm md:text-base font-medium text-slate-500 dark:text-[#9494b0] mt-3 md:mt-0 md:mb 5 font-sans tracking-wide shrink-0">
-            — {t("subtitle")}
+        <div className="mb-10">
+          <p className="text-[10px] font-bold tracking-[3px] uppercase text-[#6c63ff] mb-2">
+            {t("sectionLabel") ?? "Profile"}
           </p>
-        </motion.div>
+          <h1 className="text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white mb-2">
+            {t("title")}
+          </h1>
+          <p className="text-sm text-[#9494b0]">
+            {t("subtitle")}
+          </p>
+        </div>
 
-        {/* 🧠 KHỐI 2: CẤU TRÚC GRID CÁC KHUNG NỘI DUNG PHÍA DƯỚI (Đã được kéo lên) */}
         <div className="grid gap-8 lg:grid-cols-3">
           
-          {/* 📱 CỘT TRÁI: CHỨA ẢNH ĐẠI DIỆN KHỦNG */}
           <motion.div 
             initial={{ opacity: 0, scale: 0.9, y: 15 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
             className="flex flex-col items-center lg:items-start justify-start relative"
           >
-            {/* 🌟 ĐƯƠNG CHÚ Ý: Chiều cao tối ưu lg:h-[290px] gọn gàng để không đẩy layout xuống */}
             <div className="relative w-64 h-64 md:w-72 md:h-72 lg:w-full lg:h-[290px] rounded-full lg:rounded-[28px] overflow-hidden border-4 border-transparent p-1 shadow-[0_0_30px_rgba(108,99,255,0.15)] dark:shadow-[0_0_40px_rgba(167,139,250,0.12)] transition-all duration-300 hover:scale-[1.02]">
               <div className="w-full h-full bg-[#09090f] rounded-full lg:rounded-[24px] overflow-hidden relative">
                 <Image
-                  src="/avatar.png"
+                  src="/avatar.jpg"
                   alt="Nguyen Quoc Duong Avatar"
                   fill
                   priority
@@ -66,10 +51,8 @@ export default function AboutPage({
             </div>
           </motion.div>
 
-          {/* 💻 CỘT PHẢI: CHỨA BIO VÀ THẺ HỌC VẤN ĐƯỢC ĐẨY LÊN SÁT ĐỈNH */}
           <div className="lg:col-span-2 flex flex-col gap-5">
             
-            {/* Thẻ Học vấn & Liên hệ */}
             <motion.div 
               initial={{ opacity: 0, x: 15 }}
               animate={{ opacity: 1, x: 0 }}
@@ -97,7 +80,6 @@ export default function AboutPage({
               </div>
             </motion.div>
 
-            {/* Khối lời giới thiệu chi tiết (Bio1) */}
             <motion.div 
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
@@ -110,7 +92,6 @@ export default function AboutPage({
               </p>
             </motion.div>
 
-            {/* Grid đôi chứa Triết lý sống và Mục tiêu */}
             <div className="grid gap-5 md:grid-cols-2">
               <motion.div 
                 initial={{ opacity: 0, y: 15 }}
@@ -141,7 +122,6 @@ export default function AboutPage({
               </motion.div>
             </div>
 
-            {/* Khối MXH Links bổ trợ */}
             <motion.div 
               initial={{ opacity: 0, x: -15 }}
               animate={{ opacity: 1, x: 0 }}

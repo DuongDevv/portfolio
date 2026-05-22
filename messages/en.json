@@ -98,6 +98,7 @@
       "database": "Database & Cloud",
       "tools": "Tools & DevOps",
       "os": "Operating Systems",
+      "desktop": "Desktop",
       "softskills": "Soft Skills"
     },
     "skillsList": {
@@ -118,7 +119,7 @@
         "id": "Fashion-POS",
         "emoji": "🖥️",
         "title": "Fashion POS",
-        "desc": "A POS softwareĐ designed to manage inventory, sales revenue, and employee data for a fashion store. Optimized heavy database queries, implemented role-based user authentication, and designed an intuitive WinForms UI.",
+        "desc": "A POS software designed to manage inventory, sales revenue, and employee data for a fashion store. Optimized heavy database queries, implemented role-based user authentication, and designed an intuitive WinForms UI.",
         "tech": ["C#", "WinForms", "SQL Server", "Stored Procedure"],
         "status": "wip",
         "github": "https://github.com/DuongDevv/FashionPos.git"
