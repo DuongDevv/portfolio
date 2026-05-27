@@ -53,11 +53,8 @@ export default function Navbar() {
 
   // Đóng menu di động khi người dùng chuyển trang
   useEffect(() => {
-    if (!isOpen) return;
-
-    const timer = window.setTimeout(() => setIsOpen(false), 0);
-    return () => window.clearTimeout(timer);
-  }, [pathname, isOpen]);
+    setIsOpen(false);
+  }, [pathname]);
 
   const toggleLocale = () => {
     const newLocale = locale === "vi" ? "en" : "vi";
